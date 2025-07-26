@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual de Anestesia Local – Ebook OdontoDH</title>
+    <style>
+      /* Reset some default browser styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background-color: #f7f9fc;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Utility classes */
+      .container {
+        width: 90%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 15px 32px;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Hero section */
+      .hero {
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('hero.png');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        padding: 120px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* About section */
+      .about {
+        background-color: #ffffff;
+        padding: 60px 20px;
+      }
+
+      .about h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+
+      .about p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+
+      /* Learn section */
+      .learn {
+        background-color: #f0f7ff;
+        padding: 60px 20px;
+      }
+
+      .learn h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .learn-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      .learn-item {
+        flex: 1 1 300px;
+        max-width: 350px;
+        margin: 15px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .learn-item svg {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        margin-right: 15px;
+        fill: #007bff;
+      }
+
+      .learn-item p {
+        margin: 0;
+      }
+
+      /* For whom section */
+      .audience {
+        background-color: #ffffff;
+        padding: 60px 20px;
+      }
+
+      .audience h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .audience ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .audience li {
+        background-color: #f0f7ff;
+        margin: 10px;
+        padding: 15px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+      }
+
+      /* Author section */
+      .author {
+        background-color: #f0f7ff;
+        padding: 60px 20px;
+      }
+
+      .author .content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .author img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #e0effb;
+      }
+
+      .author-text h3 {
+        font-size: 1.6rem;
+        color: #007bff;
+        margin-bottom: 10px;
+      }
+
+      .author-text p {
+        margin-bottom: 10px;
+      }
+
+      /* Bonus section */
+      .bonus {
+        background-color: #ffffff;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .bonus h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+
+      .bonus-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .bonus-item {
+        flex: 1 1 220px;
+        max-width: 250px;
+        margin: 15px;
+        background-color: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .bonus-item h4 {
+        color: #007bff;
+        margin-bottom: 10px;
+      }
+
+      /* Guarantee section */
+      .guarantee {
+        background-color: #f0f7ff;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .guarantee h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+
+      .guarantee p {
+        max-width: 700px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+
+      .guarantee-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        fill: #007bff;
+      }
+
+      /* Testimonials section */
+      .testimonials {
+        background-color: #ffffff;
+        padding: 60px 20px;
+      }
+
+      .testimonials h2 {
+        font-size: 2rem;
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .testimonial-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .testimonial-item {
+        flex: 1 1 300px;
+        max-width: 350px;
+        background-color: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .testimonial-item p {
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      .testimonial-item .author-name {
+        font-weight: bold;
+      }
+
+      /* FAQ section */
+      .faq {
+        background-color: #f0f7ff;
+        padding: 60px 20px;
+      }
+
+      .faq h2 {
+        font-size: 2rem;
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .faq details {
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 15px 20px;
+        cursor: pointer;
+      }
+
+      .faq summary {
+        font-weight: bold;
+      }
+
+      .faq p {
+        margin-top: 10px;
+      }
+
+      /* Final CTA section */
+      .final-cta {
+        background-color: #007bff;
+        color: #ffffff;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .final-cta h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .final-cta p {
+        max-width: 700px;
+        margin: 0 auto 30px;
+      }
+
+      .final-cta .btn {
+        background-color: #ffffff;
+        color: #007bff;
+      }
+
+      .final-cta .btn:hover {
+        background-color: #e0effb;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .learn-item {
+          flex: 1 1 100%;
+        }
+        .bonus-item {
+          flex: 1 1 100%;
+        }
+        .testimonial-item {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Domine a neurofisiologia dos anestésicos locais</h1>
+      <p>
+        Um eBook completo baseado no Manual de Anestesia Local de Malamed, adaptado
+        por Dr. Diogo Henrique para você aplicar anestesia com segurança,
+        eficiência e confiança em sua prática odontológica.
+      </p>
+      <a href="#comprar" class="btn">Comprar agora</a>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <h2>Sobre o eBook</h2>
+        <p>
+          Este eBook foi criado para ajudar estudantes e profissionais de
+          odontologia a entenderem os princípios fundamentais por trás dos
+          anestésicos locais. Baseado no célebre Manual de Anestesia Local de
+          Stanley F. Malamed, o conteúdo foi organizado e explicado de forma
+          simples e direta por
+          <strong>Dr. Diogo Henrique (CRO 19511)</strong>, autor do canal
+          Odonto DH.
+        </p>
+        <p>
+          Ao longo das páginas você aprenderá sobre o mecanismo de ação dos
+          anestésicos, os diferentes tipos de vasoconstritores e suas
+          concentrações, como calcular doses com precisão, além de precauções
+          importantes para pacientes com condições cardiovasculares e
+          endocrinológicas. Todo o conteúdo foi extraído das aulas e adaptado
+          para leitura, tornando este eBook um guia indispensável para quem
+          deseja elevar o nível da anestesia local em consultório.
+        </p>
+      </div>
+    </section>
+
+    <!-- Learn Section -->
+    <section class="learn">
+      <div class="container">
+        <h2>O que você vai aprender</h2>
+        <ul class="learn-list">
+          <li class="learn-item">
+            <svg viewBox="0 0 20 20">
+              <path
+                d="M8.143 13.857l-4.286-4.286L2 11.428l6.143 6.143L18 7.714l-1.857-1.857z"
+              />
+            </svg>
+            <p>
+              Entenda os princípios da
+              <strong>neurofisiologia dos anestésicos locais</strong> e como eles
+              bloqueiam a condução nervosa.
+            </p>
+          </li>
+          <li class="learn-item">
+            <svg viewBox="0 0 20 20">
+              <path
+                d="M8.143 13.857l-4.286-4.286L2 11.428l6.143 6.143L18 7.714l-1.857-1.857z"
+              />
+            </svg>
+            <p>
+              Saiba como escolher e
+              <strong>calcular as diferentes concentrações de vasoconstritores</strong>
+              (1:10.000, 1:100.000, 1:200.000) para cada situação clínica.
+            </p>
+          </li>
+          <li class="learn-item">
+            <svg viewBox="0 0 20 20">
+              <path
+                d="M8.143 13.857l-4.286-4.286L2 11.428l6.143 6.143L18 7.714l-1.857-1.857z"
+              />
+            </svg>
+            <p>
+              Atualize-se sobre a
+              <strong>história e evidências científicas</strong> que fundamentam
+              o uso da adrenalina e outros fármacos adjuvantes.
+            </p>
+          </li>
+          <li class="learn-item">
+            <svg viewBox="0 0 20 20">
+              <path
+                d="M8.143 13.857l-4.286-4.286L2 11.428l6.143 6.143L18 7.714l-1.857-1.857z"
+              />
+            </svg>
+            <p>
+              Reconheça e gerencie os
+              <strong>efeitos sistêmicos e reações adversas</strong> da adrenalina
+              nos pacientes, incluindo taquicardia e palpitações.
+            </p>
+          </li>
+          <li class="learn-item">
+            <svg viewBox="0 0 20 20">
+              <path
+                d="M8.143 13.857l-4.286-4.286L2 11.428l6.143 6.143L18 7.714l-1.857-1.857z"
+              />
+            </svg>
+            <p>
+              Obtenha orientações práticas para
+              <strong>anestesiar pacientes com patologias cardíacas ou da
+              tireoide</strong>, reduzindo riscos e complicações.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Audience Section -->
+    <section class="audience">
+      <div class="container">
+        <h2>Para quem é este eBook?</h2>
+        <ul>
+          <li>Acadêmicos de Odontologia</li>
+          <li>Cirurgiões‑Dentistas em formação ou atuantes</li>
+          <li>Profissionais que desejam atualização científica</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="author">
+      <div class="container">
+        <div class="content">
+          <img src="author.png" alt="Ilustração do autor" />
+          <div class="author-text">
+            <h3>Sobre o autor</h3>
+            <p>
+              Dr. Diogo Henrique Vaz é cirurgião‑dentista (CRO 19511) e fundador
+              do canal <strong>Odonto DH</strong>, que já ajudou milhares de
+              estudantes e colegas de profissão em todo o Brasil. Apaixonado por
+              docência, ele apresenta conceitos complexos de forma clara e
+              prática, unindo ciência e experiência clínica.
+            </p>
+            <p>
+              Neste eBook ele reúne o essencial do Manual de Anestesia Local
+              (Malamed) e suas aulas no YouTube, oferecendo um guia completo
+              para quem busca dominar a anestesia local e proporcionar mais
+              segurança aos pacientes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="bonus">
+      <div class="container">
+        <h2>Bônus e vantagens</h2>
+        <ul class="bonus-list">
+          <li class="bonus-item">
+            <h4>Acesso vitalício</h4>
+            <p>Leia quando quiser e quantas vezes precisar, sem limite de tempo.</p>
+          </li>
+          <li class="bonus-item">
+            <h4>Download imediato</h4>
+            <p>
+              Receba o arquivo em PDF imediatamente após a confirmação da compra
+              e estude offline.
+            </p>
+          </li>
+          <li class="bonus-item">
+            <h4>Atualizações gratuitas</h4>
+            <p>
+              Fique por dentro das novas edições e receba atualizações sem custo
+              adicional.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+      <div class="container">
+        <!-- Shield icon using SVG -->
+        <svg
+          class="guarantee-icon"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 1.5l8.5 4v6c0 5.497-3.54 10.762-8.5 12-4.96-1.238-8.5-6.503-8.5-12v-6l8.5-4z"
+            fill="currentColor"
+          />
+          <path
+            d="M16.5 8.25l-6.125 6.125L7.5 11.5l1.5-1.5 1.875 1.875L15 6.75l1.5 1.5z"
+            fill="#fff"
+          />
+        </svg>
+        <h2>Garantia de satisfação</h2>
+        <p>
+          Confiamos tanto na qualidade deste material que oferecemos uma
+          <strong>garantia incondicional de 7 dias</strong>. Se dentro de uma
+          semana após a compra você não ficar satisfeito(a), basta solicitar
+          reembolso e devolveremos 100% do seu investimento.
+        </p>
+        <a href="#comprar" class="btn">Quero garantir minha vaga</a>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>O que dizem nossos leitores</h2>
+        <div class="testimonial-list">
+          <div class="testimonial-item">
+            <p>
+              “Este eBook transformou minha forma de ver a anestesia local.
+              Finalmente entendi como calcular as doses e diluições de forma
+              segura.”
+            </p>
+            <div class="author-name">Marina S. – Estudante de Odontologia</div>
+          </div>
+          <div class="testimonial-item">
+            <p>
+              “A didática do Dr. Diogo é excelente! As explicações são claras e
+              objetivas. Recomendo para todos os colegas.”
+            </p>
+            <div class="author-name">Carlos M. – Cirurgião‑Dentista</div>
+          </div>
+          <div class="testimonial-item">
+            <p>
+              “Material completo e atualizado. Ideal para quem quer revisar os
+              fundamentos e se atualizar com as evidências científicas.”
+            </p>
+            <div class="author-name">Fernanda A. – Professora de Anestesiologia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2>Perguntas frequentes</h2>
+        <details>
+          <summary>Qual é o formato do material?</summary>
+          <p>
+            O conteúdo está disponível em formato PDF para download imediato
+            após a compra. Assim você pode ler no computador, tablet ou
+            smartphone quando e onde quiser.
+          </p>
+        </details>
+        <details>
+          <summary>O acesso é vitalício?</summary>
+          <p>
+            Sim! Ao adquirir o eBook você garante acesso vitalício ao arquivo e
+            a todas as futuras atualizações sem nenhum custo adicional.
+          </p>
+        </details>
+        <details>
+          <summary>Tem suporte caso eu tenha dúvidas?</summary>
+          <p>
+            Claro! Dentro da plataforma você encontrará um canal de suporte
+            direto com o autor para tirar dúvidas relacionadas ao conteúdo do
+            eBook.
+          </p>
+        </details>
+        <details>
+          <summary>Como funciona o pagamento?</summary>
+          <p>
+            O pagamento é feito de forma segura através da Hotmart, com opções
+            de cartão de crédito, boleto bancário e PayPal. Após a confirmação
+            você recebe o acesso automaticamente.
+          </p>
+        </details>
+        <details>
+          <summary>Posso solicitar reembolso?</summary>
+          <p>
+            Sim. Você tem até 7 dias após a compra para solicitar o reembolso
+            integral, sem burocracia. Basta entrar em contato pela plataforma.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="comprar">
+      <div class="container">
+        <h2>Pronto para dominar a anestesia local?</h2>
+        <p>
+          Garanta seu exemplar do eBook agora mesmo e tenha acesso imediato ao
+          conhecimento que vai elevar o nível da sua prática odontológica. Não
+          perca a oportunidade de aprender com quem entende do assunto e de
+          oferecer mais segurança aos seus pacientes.
+        </p>
+        <a
+          href="https://www.hotmart.com/"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Comprar agora</a
+        >
+      </div>
+    </section>
+  </body>
+</html>
